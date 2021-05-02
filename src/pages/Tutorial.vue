@@ -1,163 +1,456 @@
+
 <template>
-    <section class="container">
-        <div class="tutorial">
-            <div class="tutorial__hero">
-                <h2>
-                    “Hello World”
-                </h2>
-                <h1>
-                    Secret Contract
-                </h1>
-                <p>
-                    Use this tutorial to learn about launching a local Secret Network where you’ll develop create the familiar “Hello World” secret contract,  run unit tests, and view debugmessages in the node logs.
-                </p>
-            </div>
+  <section class="container_tutorial">
+    <div class="tutorial">
+      <div class="tutorial__hero">
+        <h2>“Hello World”</h2>
+        <h1>Secret Contract</h1>
+          <br />
 
+        <p>
+          Use this tutorial to learn about launching a local Secret Network
+          where you’ll develop create the familiar “Hello World” secret
+          contract, run unit tests, and view debugmessages in the node logs.
+        </p>
+      </div>
 
-            <div class="tutorial__step ">
-                <div class="text">
-                    <h6>Launch Developer Blockchain</h6>
-                    <p>The first thing you’ll need to do to start developing secret contracts in your local environment is install and launch a Secret Network blockchain. </p>
-                    <a href="#">Let’s Go</a>
-                </div>
-                <div class="image">
-                    <img src="/img/ufo.png" alt="Step 1">
-                </div>
-            </div>
+      <div class="tutorial__step">
+        <div class="text">
+          <h6>Launch Developer Blockchain</h6>
+          <br />
 
-            <div class="tutorial__step">
-                <div class="image">
-                    <img src="/img/ufo.png" alt="Step 1">
-                </div>
-                <div class="text">
-                    <h6>Create “Hello World” Contract</h6>
-                    <p>Tutorial description Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Auctor neque interdum cursus natoque. Libero, viverra egestas faucibus sollicitudin non adipiscing morbi. </p>
-                    <a href="#">Use Docker To Launch Your Secret Node</a>
-                </div>
-            </div>
-
-            <div class="tutorial__step">
-                <div class="text">
-                    <h6>Add Debug Messages</h6>
-                    <p>Tutorial description Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Auctor neque interdum cursus natoque. Libero, viverra egestas faucibus sollicitudin non adipiscing morbi.
-                    </p>
-                    <a href="#">Find out what your Secret Contract is doing</a>
-                </div>
-                <div class="image">
-                    <img src="/img/ufo.png" alt="Step 1">
-                </div>
-            </div>
-
-            <div class="step-end">
-                <div class="text">
-                    <h6>
-                        Now You’re Ready to Try It!
-                    </h6>
-                    <p>Tutorial description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque interdum cursus natoque. Libero, viverra egestas faucibus sollicitudin non adipiscing morbi.</p>
-                    <a href="#">See It In Action </a>
-                </div>
-                    <img class="il-1" src="/img/ufo-2.png" alt="">
-                    <img class="bg-1" src="/img/bg1.png" alt="">
-            </div>
+          <p>
+            The first thing you’ll need to do to start developing secret
+            contracts in your local environment is install and launch a Secret
+            Network blockchain.
+          </p>
+          <br />
+          <router-link to="/tutorial/launching" class="btn btn-link"
+            >Let’s Go
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.84108 4.81134V7.5216H2.48948C2.21929 7.5216 2 7.73582 2 7.99977C2 8.26372 2.21929 8.47794 2.48948 8.47794H7.84108V11.1882C7.84108 11.3623 7.93767 11.5229 8.09431 11.6071C8.25029 11.6912 8.44085 11.6855 8.59096 11.5931L13.7709 8.40462C13.9139 8.31664 14 8.16426 14 7.99977C14 7.83528 13.9139 7.68291 13.7709 7.59492L10.5476 5.61148C10.3198 5.47058 10.017 5.53752 9.87274 5.76067C9.72916 5.98445 9.79768 6.27964 10.0268 6.42054L12.5916 7.99977L8.82004 10.3224V4.81134C8.82004 4.54739 8.60075 4.33317 8.33056 4.33317C8.06037 4.33317 7.84108 4.54739 7.84108 4.81134"
+                fill="#200E32"
+              />
+            </svg>
+          </router-link>
         </div>
-    </section>
+        <div class="image">
+          <img src="/img/ufo.png" alt="Step 1" />
+          <div class="icon-1">
+            <svg
+              width="43"
+              height="42"
+              viewBox="0 0 43 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.9688 24.9999V16.9999C30.9684 16.6492 30.8758 16.3047 30.7003 16.0011C30.5248 15.6974 30.2725 15.4453 29.9688 15.2699L22.9688 11.2699C22.6647 11.0944 22.3198 11.002 21.9688 11.002C21.6177 11.002 21.2728 11.0944 20.9688 11.2699L13.9688 15.2699C13.665 15.4453 13.4127 15.6974 13.2372 16.0011C13.0617 16.3047 12.9691 16.6492 12.9688 16.9999V24.9999C12.9691 25.3506 13.0617 25.6951 13.2372 25.9987C13.4127 26.3024 13.665 26.5545 13.9688 26.7299L20.9688 30.7299C21.2728 30.9054 21.6177 30.9979 21.9688 30.9979C22.3198 30.9979 22.6647 30.9054 22.9688 30.7299L29.9688 26.7299C30.2725 26.5545 30.5248 26.3024 30.7003 25.9987C30.8758 25.6951 30.9684 25.3506 30.9688 24.9999Z"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.2388 15.96L21.9688 21.01L30.6988 15.96"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21.9688 31.08V21"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="21.9688"
+                cy="21"
+                r="20"
+                stroke="#1E2022"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="tutorial__step">
+        <div class="text left-to-right">
+          <h6>Create “Hello World” Contract</h6>
+          <br />
+
+          <p>
+            Tutorial description Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Auctor neque interdum cursus natoque. Libero,
+            viverra egestas faucibus sollicitudin non adipiscing morbi.
+          </p>
+          <br />
+
+          <a href="#" class="btn btn-link"
+            >Use Docker To Launch Your Secret Node
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.84108 4.81134V7.5216H2.48948C2.21929 7.5216 2 7.73582 2 7.99977C2 8.26372 2.21929 8.47794 2.48948 8.47794H7.84108V11.1882C7.84108 11.3623 7.93767 11.5229 8.09431 11.6071C8.25029 11.6912 8.44085 11.6855 8.59096 11.5931L13.7709 8.40462C13.9139 8.31664 14 8.16426 14 7.99977C14 7.83528 13.9139 7.68291 13.7709 7.59492L10.5476 5.61148C10.3198 5.47058 10.017 5.53752 9.87274 5.76067C9.72916 5.98445 9.79768 6.27964 10.0268 6.42054L12.5916 7.99977L8.82004 10.3224V4.81134C8.82004 4.54739 8.60075 4.33317 8.33056 4.33317C8.06037 4.33317 7.84108 4.54739 7.84108 4.81134"
+                fill="#200E32"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="image right-to-left">
+          <img src="/img/ufo.png" alt="Step 1" />
+          <div class="icon-2">
+            <svg
+              width="43"
+              height="42"
+              viewBox="0 0 43 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.9688 24.9999V16.9999C30.9684 16.6492 30.8758 16.3047 30.7003 16.0011C30.5248 15.6974 30.2725 15.4453 29.9688 15.2699L22.9688 11.2699C22.6647 11.0944 22.3198 11.002 21.9688 11.002C21.6177 11.002 21.2728 11.0944 20.9688 11.2699L13.9688 15.2699C13.665 15.4453 13.4127 15.6974 13.2372 16.0011C13.0617 16.3047 12.9691 16.6492 12.9688 16.9999V24.9999C12.9691 25.3506 13.0617 25.6951 13.2372 25.9987C13.4127 26.3024 13.665 26.5545 13.9688 26.7299L20.9688 30.7299C21.2728 30.9054 21.6177 30.9979 21.9688 30.9979C22.3198 30.9979 22.6647 30.9054 22.9688 30.7299L29.9688 26.7299C30.2725 26.5545 30.5248 26.3024 30.7003 25.9987C30.8758 25.6951 30.9684 25.3506 30.9688 24.9999Z"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.2388 15.96L21.9688 21.01L30.6988 15.96"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21.9688 31.08V21"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="21.9688"
+                cy="21"
+                r="20"
+                stroke="#1E2022"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="tutorial__step">
+        <div class="text">
+          <h6>Add Debug Messages</h6>
+          <br />
+
+          <p>
+            Tutorial description Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Auctor neque interdum cursus natoque. Libero,
+            viverra egestas faucibus sollicitudin non adipiscing morbi.
+          </p>
+          <br />
+
+          <a href="#" class="btn btn-link"
+            >Find out what your Secret Contract is doing
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.84108 4.81134V7.5216H2.48948C2.21929 7.5216 2 7.73582 2 7.99977C2 8.26372 2.21929 8.47794 2.48948 8.47794H7.84108V11.1882C7.84108 11.3623 7.93767 11.5229 8.09431 11.6071C8.25029 11.6912 8.44085 11.6855 8.59096 11.5931L13.7709 8.40462C13.9139 8.31664 14 8.16426 14 7.99977C14 7.83528 13.9139 7.68291 13.7709 7.59492L10.5476 5.61148C10.3198 5.47058 10.017 5.53752 9.87274 5.76067C9.72916 5.98445 9.79768 6.27964 10.0268 6.42054L12.5916 7.99977L8.82004 10.3224V4.81134C8.82004 4.54739 8.60075 4.33317 8.33056 4.33317C8.06037 4.33317 7.84108 4.54739 7.84108 4.81134"
+                fill="#200E32"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="image">
+          <img src="/img/ufo.png" alt="Step 1" />
+          <div class="icon-3">
+            <svg
+              width="43"
+              height="42"
+              viewBox="0 0 43 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.9688 24.9999V16.9999C30.9684 16.6492 30.8758 16.3047 30.7003 16.0011C30.5248 15.6974 30.2725 15.4453 29.9688 15.2699L22.9688 11.2699C22.6647 11.0944 22.3198 11.002 21.9688 11.002C21.6177 11.002 21.2728 11.0944 20.9688 11.2699L13.9688 15.2699C13.665 15.4453 13.4127 15.6974 13.2372 16.0011C13.0617 16.3047 12.9691 16.6492 12.9688 16.9999V24.9999C12.9691 25.3506 13.0617 25.6951 13.2372 25.9987C13.4127 26.3024 13.665 26.5545 13.9688 26.7299L20.9688 30.7299C21.2728 30.9054 21.6177 30.9979 21.9688 30.9979C22.3198 30.9979 22.6647 30.9054 22.9688 30.7299L29.9688 26.7299C30.2725 26.5545 30.5248 26.3024 30.7003 25.9987C30.8758 25.6951 30.9684 25.3506 30.9688 24.9999Z"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.2388 15.96L21.9688 21.01L30.6988 15.96"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21.9688 31.08V21"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="21.9688"
+                cy="21"
+                r="20"
+                stroke="#1E2022"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-end">
+        <div class="text">
+          <div class="icon-3">
+            <svg
+              width="43"
+              height="42"
+              viewBox="0 0 43 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.9688 24.9999V16.9999C30.9684 16.6492 30.8758 16.3047 30.7003 16.0011C30.5248 15.6974 30.2725 15.4453 29.9688 15.2699L22.9688 11.2699C22.6647 11.0944 22.3198 11.002 21.9688 11.002C21.6177 11.002 21.2728 11.0944 20.9688 11.2699L13.9688 15.2699C13.665 15.4453 13.4127 15.6974 13.2372 16.0011C13.0617 16.3047 12.9691 16.6492 12.9688 16.9999V24.9999C12.9691 25.3506 13.0617 25.6951 13.2372 25.9987C13.4127 26.3024 13.665 26.5545 13.9688 26.7299L20.9688 30.7299C21.2728 30.9054 21.6177 30.9979 21.9688 30.9979C22.3198 30.9979 22.6647 30.9054 22.9688 30.7299L29.9688 26.7299C30.2725 26.5545 30.5248 26.3024 30.7003 25.9987C30.8758 25.6951 30.9684 25.3506 30.9688 24.9999Z"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.2388 15.96L21.9688 21.01L30.6988 15.96"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21.9688 31.08V21"
+                stroke="#111111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="21.9688"
+                cy="21"
+                r="20"
+                stroke="#1E2022"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <h6>Now You’re Ready to Try It!</h6>
+          <br />
+
+          <p>
+            Tutorial description Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Auctor neque interdum cursus natoque. Libero,
+            viverra egestas faucibus sollicitudin non adipiscing morbi.
+          </p>
+          <br />
+
+          <a href="#" class="btn btn-link"
+            >See It In Action
+
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.84108 4.81134V7.5216H2.48948C2.21929 7.5216 2 7.73582 2 7.99977C2 8.26372 2.21929 8.47794 2.48948 8.47794H7.84108V11.1882C7.84108 11.3623 7.93767 11.5229 8.09431 11.6071C8.25029 11.6912 8.44085 11.6855 8.59096 11.5931L13.7709 8.40462C13.9139 8.31664 14 8.16426 14 7.99977C14 7.83528 13.9139 7.68291 13.7709 7.59492L10.5476 5.61148C10.3198 5.47058 10.017 5.53752 9.87274 5.76067C9.72916 5.98445 9.79768 6.27964 10.0268 6.42054L12.5916 7.99977L8.82004 10.3224V4.81134C8.82004 4.54739 8.60075 4.33317 8.33056 4.33317C8.06037 4.33317 7.84108 4.54739 7.84108 4.81134"
+                fill="#200E32"
+              />
+            </svg>
+          </a>
+        </div>
+        <img class="il-1" src="/img/ufo-2.png" alt="il 1" />
+        <img class="bg-1" src="/img/bg1.png" alt="bg 1" />
+      </div>
+    </div>
+
+    
+  </section>
 </template>
 
-
-<style lang="scss" scope>
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    align-items:center;
-    align-content: center
+<style lang="scss" scoped>
+.container_tutorial {
+  background: var(--grayscale);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  align-content: center;
 }
-.tutorial{
-    padding: 50px 0;
+.tutorial {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  padding: 0 10%;
+  padding-top: 50px;
+  &__hero {
+    padding: 0 30%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-align: center;
+    & h1,
+    h2 {
+      width: 100%;
+      font-weight: normal;
+    }
+    @media (max-width: 1024px) {
+      padding: 15%;
+    }
+    @media (max-width: 404px) {
+      padding: 0 5%;
+    }
+  }
+  &__step {
+    display: flex;
     position: relative;
-    margin:auto;
-    margin-bottom: 150px;
-    &__hero{
-        padding:0 25%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        justify-items: center;
-        align-items: flex-start;
-        align-content: flex-start;
-        text-align: center;
-        & h1,h2{
-            width:100%;
-            font-weight: normal;
-        }
-        @media (max-width:1024px){
-            padding:0 20%;
-        }
-        @media (max-width:404px){
-            padding:0 5%;
-        }
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+    padding: 20px;
+    @media (max-width: 1024px) {
+      margin: 30px 5%;
+      flex-wrap: wrap;
+      justify-items: center;
+      justify-content: center;
+      height: auto;
+      text-align: center;
     }
-    &__step{
-        border-bottom: 2px solid var(--dark-1);
-        border-right: 2px solid var(--dark-1);
-        border-radius: 30px;
-        margin:120px 25%;
-        height:250px;
-        display: flex;
-          @media (max-width:1024px){
-            margin:30px 0;
-            flex-wrap: wrap;
-            justify-items: center;
-            justify-content: center;
-            height:auto;
-            text-align: center;
-        }
-        & .text{
-            padding:24px
-        }
-        & .image{
-            & img{
-                width:100%
-            }
-        }
+    & .text {
+      padding: 24px 5%;
+      @media (max-width: 1024px) {
+        padding: 24px 15%;
+      }
+      @media (max-width: 404px) {
+        padding: 24px 5%;
+      }
     }
-    & .step-end{
-        padding:0 5%;
-        flex-wrap: wrap;
-        @media (max-width:1024px){
-            width:auto;
-            padding:0;
-
-        }
-        display: flex;
-        .text{
-            padding: 0 25%;
-            text-align: center;
-            margin: auto;
-            margin-top: 150px;
-            padding-bottom: 50px;
-             @media (max-width:404px){
-                padding: 0 10px;
-            }
-        }
-        & .il-1{
-            width: 40%;
-             @media (max-width:404px){
-                width: 60%;
-            }
-            margin: auto;
-        }
-        & .bg-1{
-            width: 100%;
-            position: absolute;
-            bottom: 70px;
-            left: 0;
-        }
+    & .left-to-right {
+      width: 70%;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+      margin-left: auto;
     }
+    & .image {
+      width:30%;
+      & img {
+        width: 100%;
+      }
+    }
+    & .right-to-left {
+      width: 30%;
+      padding: 24px;
+      padding-left: 50px;
+      position: absolute;
+      @media (max-width: 1024px) {
+        position: static;
+        width: 30%;
+        padding: 0;
+      }
+    }
+    & .icon-1 {
+      position: absolute;
+      right: -5%;
+      top: 30%;
+      // &:after {
+      //   border-bottom: 1px solid black;
+      //   border-right: 1px solid black;
+      //   border-bottom-right-radius: 50px;
+      //   content: "";
+      //   position: absolute;
+      //   top: 40px;
+      //   right: 20px;
+      //   height: 160px;
+      //   width: 100%;
+      //   z-index: -1;
+      //   @media (max-width: 1024px) {
+      //     height: 520px;
+      //   }
+      // }
+    }
+    & .icon-2 {
+      position: absolute;
+      left: -5%;
+      top: 50%;
+    }
+    & .icon-3 {
+      position: absolute;
+      right: -5%;
+      top: 50%;
+    }
+    & .icon-4 {
+      position: absolute;
+      right: 50%;
+    }
+  }
+  & .step-end {
+    flex-wrap: wrap;
+    @media (max-width: 1024px) {
+      width: auto;
+      padding: 0;
+    }
+    display: flex;
+    .text {
+      padding: 0 25%;
+      text-align: center;
+      margin: auto;
+      @media (max-width: 404px) {
+        padding: 0 10px;
+      }
+    }
+    & .il-1 {
+      width: 40%;
+      @media (max-width: 404px) {
+        width: 60%;
+      }
+      margin: auto;
+    }
+    & .bg-1 {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
 }
-
 </style>
