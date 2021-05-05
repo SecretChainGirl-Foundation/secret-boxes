@@ -43,7 +43,7 @@
         autoplay
       ></lottie-player>
     </div>
-    <div class="hero__arrow-bottom">
+    <div class="hero__arrow-bottom" @click="scrollToElement">
       <svg
         width="40"
         height="40"
@@ -60,9 +60,24 @@
         />
       </svg>
     </div>
+    <div class="next-to-about"></div>
   </section>
 </template>
 
+<script>
+export default {
+  methods:{
+    scrollToElement() {
+      const el = this.$el.getElementsByClassName('next-to-about')[0];
+      console.log(el)
+      if (el) {
+        // Use el.scrollIntoView() to instantly scroll to the element
+        el.scrollIntoView({behavior: 'smooth'});
+      }
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 .hero {
   padding: 50px 10%;
@@ -79,7 +94,6 @@
     align-items: center;
     align-content: center;
     padding-right: 10%;
-
 
     & .title {
       font-family: Gobold High;
@@ -136,9 +150,13 @@
     }
   }
   &__arrow-bottom {
+    cursor: pointer;
     width: 100%;
     display: flex;
     justify-content: center;
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
 
   @media (max-width: 1024px) {

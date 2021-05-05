@@ -279,6 +279,7 @@ export default {
       }
       &:hover {
         background: var(--primary);
+        border-radius: 15px;
         cursor: pointer;
       }
       & a {
@@ -292,10 +293,10 @@ export default {
       margin-left: 0;
     }
   }
-  // @media (min-width:1024px){
-  //     & .nav-dropdown:hover .navbar-dropdown{
-  //         display: block;
-  //     }
-  // }
+  @media (min-width:1024px){
+      & .nav-dropdown:hover .navbar-dropdown{
+          display: block;
+      }
+  }
 }
 </style>

@@ -113,14 +113,18 @@
     & .rectangle:hover .bg-layer,
     .square:hover .bg-layer {
       background-color: var(--dark-5);
+      opacity: 0.8;
     }
     & .title,
     p {
       width: 100%;
       text-align: left;
-      bottom: 10%;
+      bottom: 0;
       color: white;
       position: absolute;
+    }
+    & p {
+      display: none;
     }
     & .rectangle:hover .title,
     .rectangle:hover p,
@@ -128,9 +132,10 @@
     .square:hover p {
       width: 100%;
       text-align: center;
-      top: 40%;
+      bottom: 20%;
       color: white;
       position: absolute;
+      display: inline-block;
     }
 
     & .bg-layer:hover .rectangle .title {
