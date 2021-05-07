@@ -309,7 +309,7 @@ export default {
   position: relative;
   display: flex;
   align-items: flex-start;
-  overflow: hidden;
+  // overflow: hidden;
   background: var(--grayscale);
   margin-top: 0;
 }

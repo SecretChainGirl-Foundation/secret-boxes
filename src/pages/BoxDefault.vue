@@ -1,54 +1,12 @@
 <template>
-  <div class="about">
-    <div class="about__left">
-      <h2>What Are Sercet Boxes ?</h2>
-      <p class="mt-5">
-        Secret Boxes are quickstarts to help you build decentralized, privacy
-        preserving dApps on the Secret Network.
-      </p>
-      <p>
-        Each box comes with everything you need to start building and includes
-        libraries, secret contracts and beautiful UI elements so you can focus
-        on coding your functionality.
-      </p>
-      <p>
-        Secret Boxes can be anything from use case blueprints to chain
-        integrations, technical bootstraps and more.
-      </p>
-      <a href="#" class="btn btn-primary btn-icon-hover mt-4"
-        >Learn More
-        <svg
-          width="12"
-          height="10"
-          viewBox="0 0 12 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M11.1665 4.81706L1.1665 4.81706"
-            stroke="#FCFCFC"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M7.1333 0.80083L11.1666 4.81683L7.1333 8.8335"
-            stroke="#FCFCFC"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </a>
-    </div>
-    <div class="about__right">
+  <div class="box">
       <ul class="list-box">
-        <li>
+        <li class=" right-to-left">
           <lottie-player
             src="https://assets5.lottiefiles.com/private_files/lf30_sqamzndl.json"
             background="transparent"
             speed="1"
-            class="about__image"
+            class="image"
             loop
             autoplay
           ></lottie-player>
@@ -57,19 +15,18 @@
             <div class="text">
               <h3 class="title">
                 SECRET COUNTER
-                <a class="btn btn-secondary btn-sm" href="#">New</a>
+                <a class="btn btn-secondary " href="#">New</a>
               </h3>
               <br />
               <p class="description">
-                A simple counter illustrating the basics of working with a
-                secret contract.
+              This is the starting point for learning about Secret Contracts. Based on the “simple counter” secret contract this box illustrates the basics of querying and modifying contract state using the “getCount” and “increment” messages.
               </p>
               <br />
             </div>
             <div class="action">
-              <a href="#" class="btn btn-sm btn-primary mr-3">Let’s Go!</a>
-              <a href="#" class="btn btn-sm btn-secondary mr-3">Docs</a>
-              <a href="#" class="btn btn-sm btn-secondary">
+              <a href="#" class="btn  btn-primary mr-3">Let’s Go!</a>
+              <a href="#" class="btn  btn-secondary mr-3">Docs</a>
+              <a href="#" class="btn  btn-secondary">
                 <svg
                   width="16"
                   height="16"
@@ -87,12 +44,12 @@
             </div>
           </div>
         </li>
-        <li>
+        <li class="left-to-right">
           <lottie-player
             src="https://assets2.lottiefiles.com/private_files/lf30_0vbtxqrd.json"
             background="transparent"
             speed="1"
-            class="about__image"
+            class="image"
             loop
             autoplay
           ></lottie-player>
@@ -100,27 +57,26 @@
             <div class="text">
               <h3 class="title">
                 FIGMENT LEARN
-                <a class="btn btn-secondary btn-sm" href="#">New</a>
+                <a class="btn btn-secondary " href="#">New</a>
               </h3>
               <br />
               <p class="description">
-                The learn pathway for devs using Figment’s DataHub gateway to
-                access the Secret Network and deploy secret contracts.
+                Figment Learn is a fun learning pathway to help developers quickly learn about working with the Secret Network. Using the DataHub gateway you’ll be taken through the steps to deploy a secret contract to the testnet, and even get some SCRT tokens for your efforts!
               </p>
               <br />
             </div>
             <div class="action">
-              <a href="#" class="btn btn-sm btn-primary mr-3">Let’s Go!</a>
-              <a href="#" class="btn btn-sm btn-secondary">Docs</a>
+              <a href="#" class="btn  btn-primary mr-3">Let’s Go!</a>
+              <a href="#" class="btn  btn-secondary">Docs</a>
             </div>
           </div>
         </li>
-        <li>
+        <li class="right-to-left">
           <lottie-player
             src="https://assets10.lottiefiles.com/private_files/lf30_woabmjiz.json"
             background="transparent"
             speed="1"
-            class="about__image"
+            class="image"
             loop
             autoplay
           ></lottie-player>
@@ -128,108 +84,50 @@
             <div class="text">
               <h3 class="title">
                 RICHIE RICH
-                <a class="btn btn-secondary btn-sm" href="#">Coming Soon</a>
+                <a class="btn btn-secondary " href="#">Coming Soon</a>
               </h3>
               <br />
               <p class="description">
-                The secret box based on Yao’s Millionaires’ Problem. Subscribe
-                to get notified.
+               How do you find out who’s the richest without revealing your net worth to the world? This secret box, based on Yao’s Millionaires’ Problem, illustrates how that can be done with secret contracts.
               </p>
               <br />
             </div>
             <div class="action">
-              <a href="#" class="btn btn-sm btn-primary mr-3">Subscribe</a>
-              <a href="#" class="btn btn-sm btn-secondary">Learn More</a>
+              <a href="#" class="btn  btn-primary mr-3">Subscribe</a>
+              <a href="#" class="btn  btn-secondary">Learn More</a>
             </div>
           </div>
         </li>
       </ul>
-    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.about {
+.box {
   padding: 50px 10%;
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   background: var(--grayscale);
-  &__image{
-    width: 264px; height: 174px;
-    @media (max-width: 404px) {
-      width: 100%;
-      height: auto;
-    }
-  }
-  &__left {
-    padding-right: 50px;
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    & .title {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    & p {
-      margin-bottom: 10px;
-    }
-    & .btn-default {
-      margin-top: 20px;
-    }
-
-    @media (max-width: 1024px) {
-      width: 100%;
-      justify-items: center;
-      justify-content: center;
-      padding-right: 0;
-      text-align: center;
-      padding-bottom: 50px;
-    }
-  }
-  &__right {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
     & .list-box {
       width: 100%;
       list-style: none;
       margin: 0;
       & li {
-        display: flex;
-        margin-top: 80px;
-        min-height: 200px;
+        padding: 50px 0;
         width: 100%;
+        margin-bottom: 10px;
         @media (max-width: 1024px) {
-          flex-wrap: wrap;
-          height: auto;
+           display: block;
         }
-        @media (max-width: 414px) {
-          justify-content: center;
-          justify-items: center;
-          margin-top: 40px;
-          flex-wrap: wrap;
-        }
-        & img {
-          width: 40%;
-          @media (max-width: 1440px) {
-            width: 20%;
-          }
-          @media (max-width: 414px) {
+        & .image {
+          width: 384px;
+          @media (max-width: 1024px) {
             width: 100%;
           }
-          padding: 16px;
         }
         & .box-item {
-          width: 60%;
-          @media (max-width: 1440px) {
-            width: 80%;
-          }
-          @media (max-width: 414px) {
+          width: 50%;
+          padding: 5%;
+          @media (max-width: 1024px) {
             width: 100%;
           }
           & .text {
@@ -244,7 +142,6 @@
             flex-wrap: wrap;
             align-items: center;
             align-content: center;
-            margin-top: 60px;
             @media (max-width: 1024px) {
               justify-items: center;
               justify-content: center;
@@ -268,27 +165,17 @@
              }
             }
           }
-          & .action, .description {
-            display: none;
-          }
-          &:hover .title {
-            margin-top: 0;
-          }
-          &:hover .action {
-             display: block;
-          }
-          &:hover .description {
-            display: block;
-          }
         }
       }
     }
-
-    @media (max-width: 1024px) {
-      width: 100%;
-      justify-items: center;
-      justify-content: center;
+    .right-to-left{
+      display: block;
+      & .image{
+        float: right;
+      }
     }
-  }
+    .left-to-right{
+      display: flex;
+    }
 }
 </style>

@@ -5,7 +5,8 @@
       <p class="description">
         The beautiful, fun and easy way to get started building Secret Apps.
       </p>
-      <a class="btn btn-primary btn-lg btn-icon-hover" href="#"
+      <router-link class="btn btn-primary btn-lg btn-icon-hover"
+        to="/box-default"
         >Start Unboxing
 
         <svg
@@ -30,7 +31,8 @@
             stroke-linejoin="round"
           />
         </svg>
-      </a>
+      </router-link>
+
       <a class="btn btn-secondary btn-lg" href="#">Tutorials</a>
     </div>
     <div class="hero__image">
@@ -66,17 +68,17 @@
 
 <script>
 export default {
-  methods:{
+  methods: {
     scrollToElement() {
-      const el = this.$el.getElementsByClassName('next-to-about')[0];
-      console.log(el)
+      const el = this.$el.getElementsByClassName("next-to-about")[0];
+      console.log(el);
       if (el) {
         // Use el.scrollIntoView() to instantly scroll to the element
-        el.scrollIntoView({behavior: 'smooth'});
+        el.scrollIntoView({ behavior: "smooth" });
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .hero {
@@ -85,7 +87,7 @@ export default {
   flex-wrap: wrap;
   width: 100vw;
   min-height: 714px;
-    background: var(--grayscale);
+  background: var(--grayscale);
 
   &__text {
     width: 50%;

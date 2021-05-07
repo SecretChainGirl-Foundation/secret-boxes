@@ -36,7 +36,8 @@ footer {
   height: 150px;
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
+  // overflow: hidden;
 }
 
 .footer-index {
@@ -55,6 +56,9 @@ footer {
   @media (max-width: 1024px) {
     text-align: center;
     border-bottom: none;
+    left: 0%;
+    width: 100%;
+    bottom: 100px;
   }
 }
 .footer-bar2 {
@@ -78,13 +82,16 @@ footer {
     justify-items: center;
     text-align: center;
     flex-wrap: wrap;
+    bottom: 0;
     & .left {
       width: 100%;
-      margin-top: -100px;
+      margin-top: 0px;
     }
     & .right {
       width: 100%;
     }
+    left: 0%;
+    width: 100%;
   }
 }
 </style>

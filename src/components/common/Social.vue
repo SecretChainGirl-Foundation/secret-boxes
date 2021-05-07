@@ -78,7 +78,7 @@
 
 <style lang="scss">
 .social-icon{
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .social-icon:hover {
   opacity: 0.8;

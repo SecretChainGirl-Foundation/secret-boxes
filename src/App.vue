@@ -33,6 +33,7 @@ export default {
   box-sizing: border-box;
 }
 
+
 // Reset Default Style
 a {
   text-decoration: none;
@@ -138,7 +139,7 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .app {
@@ -152,8 +153,12 @@ body {
 .main {
   width: 100%;
   margin-top: 185px;
+  font-size: 1rem;
   @media (max-width: 1024px) {
     margin-top: 80px;
+  }
+  @media (max-width: 250px) {
+    font-size: .5rem;
   }
 }
 
@@ -195,7 +200,6 @@ body {
 .btn-secondary:hover {
   background: #fff2b7;
 }
-
 
 .btn-link {
   padding:8px;

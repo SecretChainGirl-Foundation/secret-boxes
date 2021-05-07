@@ -530,7 +530,7 @@ secretcli keys list
   position: relative;
   display: flex;
   align-items: flex-start;
-  overflow: hidden;
+  // overflow: hidden;
   background: var(--grayscale);
   margin-top: 0;
 }
@@ -538,7 +538,7 @@ secretcli keys list
   position: absolute;
   width: 100%;
   left: 0;
-  overflow: hidden;
+  // overflow: hidden;
   @media (max-width: 1024px) {
     width: 200%;
     left: -50%;
@@ -672,7 +672,7 @@ secretcli keys list
   height: 60%;
   background: var(--grayscale-title-active);
   z-index: 1302;
-  overflow:scroll;
+  // overflow:scroll;
   border-radius: 15px;
   & p {
     padding: 30px 0;

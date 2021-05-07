@@ -43,6 +43,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 .news {
   padding: 50px 10%;
   display: flex;
