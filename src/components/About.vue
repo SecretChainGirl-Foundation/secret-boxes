@@ -157,7 +157,7 @@
   background: var(--grayscale);
   &__image{
     width: 264px; height: 174px;
-    @media (max-width: 404px) {
+    @media (max-width: 1024px) {
       width: 100%;
       height: auto;
     }
@@ -195,42 +195,44 @@
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
+   
     & .list-box {
       width: 100%;
       list-style: none;
-      margin: 0;
+      margin: 0 auto;
+      
       & li {
         display: flex;
         margin-top: 80px;
         min-height: 200px;
         width: 100%;
+        
         @media (max-width: 1024px) {
           flex-wrap: wrap;
           height: auto;
+          align-items: center;
+          align-content: center;
         }
         @media (max-width: 414px) {
-          justify-content: center;
-          justify-items: center;
           margin-top: 40px;
-          flex-wrap: wrap;
         }
         & img {
           width: 40%;
-          @media (max-width: 1440px) {
+          @media (min-width: 1440px) {
             width: 20%;
           }
-          @media (max-width: 414px) {
+          @media (max-width: 1024px) {
             width: 100%;
           }
           padding: 16px;
         }
         & .box-item {
           width: 60%;
-          @media (max-width: 1440px) {
-            width: 80%;
-          }
-          @media (max-width: 414px) {
+          @media (max-width: 1024px) {
             width: 100%;
+          }
+          @media (min-width: 1440px) {
+            width: 80%;
           }
           & .text {
             width: 100%;
@@ -261,11 +263,13 @@
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            @media (max-width: 1024px) {
-             & .btn{
-               display: inline-block;
-               margin-bottom: 16px;
-             }
+             @media (max-width: 1024px) {
+              justify-items: center;
+              justify-content: center;
+              & .btn{
+                display: inline-block;
+                margin-bottom: 16px;
+              }
             }
           }
           & .action, .description {
@@ -276,9 +280,15 @@
           }
           &:hover .action {
              display: block;
+             @media (max-width: 1024px) {
+               display: flex;
+             }
           }
           &:hover .description {
             display: block;
+            @media (max-width: 1024px) {
+               display: flex;
+             }
           }
         }
       }

@@ -37,6 +37,7 @@
         </div>
         <ul v-if="searchDataActive">
           <li v-for="s in searchDataView" :key="s.id">
+            <a href="#" @click="searchDataView = []">
             <svg
               width="16"
               height="16"
@@ -60,6 +61,7 @@
               />
             </svg>
             {{ s.name }}
+            </a>
           </li>
         </ul>
       </div>
@@ -289,7 +291,23 @@ export default {
       },
       {
         id: 4,
-        name: "Grey Rich",
+        name: "Box 1",
+      },
+      {
+        id: 5,
+        name: "Box 2",
+      },
+      {
+        id: 6,
+        name: "Box 3",
+      },
+      {
+        id: 7,
+        name: "Box 4",
+      },
+      {
+        id: 8,
+        name: "Box 5",
       },
     ],
     newsFeed: [
@@ -356,15 +374,13 @@ export default {
 .bg-news {
   position: absolute;
   width: 100%;
+  height: 200px;
   left: 0;
   // overflow: hidden;
   @media (max-width: 1024px) {
-    width: 250%;
+    height: 300px;
     left: -50%;
-  }
-  @media (max-width: 600px) {
-    width: 550%;
-    left: -250%;
+    width: 200%;
   }
 }
 .container_news {
@@ -384,11 +400,11 @@ export default {
     position: absolute;
     top: 50px;
     color: white;
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       text-align: center;
-      left: 5%;
+      left: 10%;
       top: 200px;
-      width: 90%;
+      width: 80%;
     }
     & .form-control {
       display: flex;
@@ -409,6 +425,8 @@ export default {
       margin-top: 10px;
       background: white;
       list-style: none;
+      max-height: 250px;
+      overflow-y: scroll;
       & li {
         cursor: pointer;
         border-radius: 15px;
@@ -426,7 +444,7 @@ export default {
     left: 20%;
     color: white;
     z-index: 10;
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       text-align: center;
       left: 0;
       width: 100%;

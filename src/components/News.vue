@@ -133,10 +133,21 @@
     .square:hover p {
       width: 100%;
       text-align: center;
-      bottom: 20%;
+      left: 0;
+      bottom: 30%;
       color: white;
       position: absolute;
       display: inline-block;
+      @media (max-width:1024px){
+        bottom: 30%;
+        left:0
+      }
+    }
+    & .rectangle:hover .title,
+    .square:hover .title{
+      @media (max-width:1024px){
+        bottom: 35%;
+      }
     }
 
     & .bg-layer:hover .rectangle .title {

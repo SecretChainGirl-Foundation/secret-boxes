@@ -2,8 +2,8 @@
   <div class="box">
     <ul class="list-menu">
       <li v-for="i in 10" :key="i">
-        <h6>Lorem ipsum {{ i }}</h6>
-        <ul v-if="i == 3">
+        <h6 @click="subListMenuActive(i)">Lorem ipsum {{ i }}</h6>
+        <ul :class="(menuActive.includes(i))? 'sub-list-menu active' : 'sub-list-menu'">
           <li>
             <h6>
               <svg
@@ -132,8 +132,10 @@
             </p>
             <br />
           </div>
+<div class="image">
           <img src="/img/ufo-5.png" alt="Lorem">
 
+</div>
       </li>
       <li >
           <div class="text">
@@ -152,7 +154,9 @@
             </p>
             <br />
           </div>
-          <img src="/img/ufo-5.png" alt="Lorem">
+         <div class="image">
+            <img src="/img/ufo-5.png" alt="Lorem">
+         </div>
 
       </li>
       <li >
@@ -262,13 +266,24 @@
   </div>
 </template>
 <script>
-// export default {
-//   data() {
-//     return {
-//       dropDownChat: false,
-//     };
-//   },
-// };
+export default {
+  data() {
+    return {
+      menuActive: [],
+    };
+  },
+  methods:{
+    subListMenuActive(id){
+      if(!this.menuActive.includes(id)){
+        this.menuActive.push(id)
+      }else{
+        this.menuActive = this.menuActive.filter(i => {
+          return i !== id
+        })
+      }
+    }
+  }
+};
 </script>
 <style lang="scss" scoped>
 .box {
@@ -284,6 +299,7 @@
       width: 100%;
     }
     margin: 0;
+
     & li {
       cursor: pointer;
       background: white;
@@ -292,6 +308,10 @@
         padding: 16px;
         width: 80%;
         border-bottom: 1px solid #c2c2e3;
+        &:hover {
+          border-radius: 2px;
+            background: var(--primary);
+      }
       }
       & ul {
         margin-left: 20px;
@@ -300,9 +320,6 @@
           display: flex;
           & svg {
             margin-right: 10px;
-          }
-          &:hover {
-            background: var(--primary);
           }
         }
       }
@@ -315,6 +332,9 @@
         & span{
           width: 24px;
         }
+        &:hover input{
+            background: var(--primary);
+          }
         & input{
           border: 0;
           width: 100%;
@@ -322,6 +342,13 @@
           padding: 2px 4px;
         }
       }
+
+      & .sub-list-menu{
+        display: none;
+      }
+       & .active{
+          display: block;
+        }
     }
   }
   & .list-box {
@@ -382,7 +409,6 @@
             }
           }
         }
-       
       }
       & code {
         text-align: left;
@@ -406,9 +432,15 @@
         margin: 30px 0;
         @media (max-width: 1024px) {
             width: 100%;
+            margin-bottom: 30px;
         }
         & img {
-          width: 40%
+          height:100%;
+          @media (max-width: 1024px) {
+            width: 80%;
+            height: auto;
+            margin: 0;
+          }
         }
       }
       & .box-item {

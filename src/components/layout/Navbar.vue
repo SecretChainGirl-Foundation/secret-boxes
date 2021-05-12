@@ -53,7 +53,9 @@
         </svg>
       </li>
       <li class="nav-dropdown" >
-        <div class="nav-dropdown-link" @click="toggleDropdown = !toggleDropdown">
+        <div class="nav-dropdown-link"
+          @mouseover="toggleDropdown = true"
+          @click="toggleDropdown = !toggleDropdown">
           <span>Boxes</span>
           <svg
             width="8"
@@ -294,10 +296,10 @@ export default {
       margin-left: 0;
     }
   }
-  @media (min-width:1024px){
-      & .nav-dropdown:hover .navbar-dropdown{
-          display: block;
-      }
-  }
+  // @media (min-width:1024px){
+  //     & .nav-dropdown:hover .navbar-dropdown{
+  //         display: block;
+  //     }
+  // }
 }
 </style>
