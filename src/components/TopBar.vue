@@ -6,15 +6,12 @@
 
 <script>
 import Social from "./common/Social.vue";
-
 export default {
-  name: "App",
   components: {
     Social,
   },
 };
 </script>
-
 
 <style lang="scss" scoped>
 .topbar {

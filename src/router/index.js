@@ -1,75 +1,102 @@
-import { createWebHistory, createRouter } from "vue-router";
-import Home from "../pages/Index.vue";
-import SecretCounter from "../pages/SecretCounter.vue";
-import Tutorial from "../pages/Tutorial.vue";
-import TutorialLaunching from "../pages/TutorialLaunching.vue";
-import Support from "../pages/Support.vue";
-import ExampleComponent from "../pages/ExampleComponent.vue";
-import BoxDefault from "../pages/BoxDefault.vue";
-import Docs from "../pages/Docs.vue";
-import News from "../pages/News.vue";
-import ArticlePage from "../pages/ArticlePage.vue";
-
+import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home,
+    path: "",
+    component: () =>
+      import(/* webpackChunkName: "homeLayout" */ "../layouts/Default.vue"),
+    children: [
+      {
+        path: "",
+        name: "Home",
+        component: () =>
+          import(/* webpackChunkName: "home" */ "../views/Home.vue"),
+      },
+      {
+        path: "/updates",
+        name: "Updates",
+        component: () =>
+          import(/* webpackChunkName: "updates" */ "../views/Updates.vue"),
+      },
+      {
+        path: "/tutorials",
+        name: "Tutorials",
+        component: () =>
+          import(/* webpackChunkName: "tutorials" */ "../views/Tutorials.vue"),
+      },
+      {
+        path: "/tutorial/launching",
+        name: "TutorialLaunching",
+        component: () =>
+          import(
+            /* webpackChunkName: "tutorialLaunching" */ "../views/TutorialLaunching.vue"
+          ),
+      },
+      {
+        path: "/support",
+        name: "Support",
+        component: () =>
+          import(/* webpackChunkName: "support" */ "../views/Support.vue"),
+      },
+      {
+        path: "/secret/boxes",
+        name: "SecretBoxes",
+        component: () =>
+          import(
+            /* webpackChunkName: "secretBoxes" */ "../views/SecretBoxes.vue"
+          ),
+      },
+      {
+        path: "/secret/counter",
+        name: "SecretCounter",
+        component: () =>
+          import(
+            /* webpackChunkName: "secretCounter" */ "../views/SecretCounter.vue"
+          ),
+      },
+    ],
   },
   {
-    path: "/secret/counter",
-    name: "SecretCounter",
-    component: SecretCounter,
+    component: () =>
+      import(/* webpackChunkName: "docsLayout" */ "../layouts/Docs.vue"),
+    children: [
+      {
+        path: "/docs",
+        name: "Docs",
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () =>
+          import(/* webpackChunkName: "docs" */ "../views/Docs.vue"),
+      },
+      {
+        path: "/docs/:slug",
+        name: "DocsItem",
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () =>
+          import(/* webpackChunkName: "docsItem" */ "../views/Docs.vue"),
+      },
+    ],
   },
   {
-    path: "/tutorial",
-    name: "Tutorial",
-    component: Tutorial,
+    path: "/tutorial/:slug",
+    component: () =>
+      import(/* webpackChunkName: "articleLayout" */ "../layouts/Article.vue"),
+    children: [
+      {
+        path: "",
+        name: "Article",
+        component: () =>
+          import(/* webpackChunkName: "article" */ "../views/Article.vue"),
+      },
+    ],
   },
-  {
-    path: "/tutorial/launching",
-    name: "TutorialLaunching",
-    component: TutorialLaunching,
-  },
-  {
-    path: "/support",
-    name: "Support",
-    component: Support,
-  },
-  {
-    path: "/example-component",
-    name: "ExampleComponent",
-    component: ExampleComponent
-  },
-  {
-    path: "/box-default",
-    name: "BoxDefault",
-    component: BoxDefault
-  },
-  {
-    path: "/docs",
-    name: "Docs",
-    component: Docs
-  },
-  {
-    path: "/news",
-    name: "News",
-    component: News
-  },
-  {
-    path: "/article-page",
-    name: "ArticlePage",
-    component: ArticlePage
-  }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
-  scrollBehavior(to, from, savedPosition) {
-    // always scroll to top
-    return { top: 0 }
-  },
-});
+  routes
+})
 
 export default router;
