@@ -1,5 +1,5 @@
 <template>
-  <section class="main">
+  <section class="main_updates">
     <img class="bg-news" src="/img/bg-news.png" alt="launcing" />
     <div class="container_news">
       <h1 class="title">News & Updates</h1>
@@ -359,7 +359,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.main {
+.main_updates {
   width: 100%;
   position: relative;
   display: flex;
@@ -369,6 +369,9 @@ export default {
   background: var(--theme-bg-light);
   color: var(--theme-color);
   margin-top: 0;
+  @media (max-width:1024px){
+    margin-top:-80px
+  }
 }
 .bg-news {
   position: absolute;
@@ -381,7 +384,7 @@ export default {
     left: -50%;
     width: 200%;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 400px) {
     height: 500px;
   }
 }
@@ -393,7 +396,7 @@ export default {
     padding: 0 5%;
     padding-top: 350px;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 369px) {
     padding-top: 500px;
   }
   position: relative;
@@ -411,7 +414,7 @@ export default {
       top: 200px;
       width: 80%;
     }
-    @media (max-width: 720px) {
+    @media (max-width: 369px) {
       top: 350px;
     }
     & .form-control {

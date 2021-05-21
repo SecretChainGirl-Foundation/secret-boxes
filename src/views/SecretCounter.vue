@@ -148,7 +148,13 @@
     </div>
   </section>
 </template>
-
+<script>
+export default {
+  created(){
+    window.scrollTo(0,0);
+  }
+}
+</script>
 <style lang="scss" scoped>
 .container_secret_counter {
   display: flex;

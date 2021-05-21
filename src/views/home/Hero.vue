@@ -34,7 +34,7 @@
         </svg>
       </router-link>
 
-      <router-link to="/tutorial" class="btn btn-secondary btn-lg" href="#"
+      <router-link to="/tutorials" class="btn btn-secondary btn-lg" href="#"
         >Tutorials</router-link
       >
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <section class="main">
+  <section class="main_tutorial">
     <img class="bg-launching" src="/img/bg-launching.png" alt="launcing" />
     <div class="container_tutorial_launch">
       <h2 class="title">
@@ -613,7 +613,7 @@ secretcli keys list
 };
 </script>
 <style lang="scss" scoped>
-.main {
+.main_tutorial {
   width: 100%;
   position: relative;
   display: flex;
@@ -621,6 +621,9 @@ secretcli keys list
   background: var(--theme-bg-light);
   color: var(--theme-color);
   margin-top: 0;
+  @media (max-width:1024px){
+    margin-top:-80px
+  }
 }
 .bg-launching {
   position: absolute;

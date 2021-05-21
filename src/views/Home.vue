@@ -1,7 +1,7 @@
 <template>
   <div>
     <home-hero v-on:scrollTo="scrollToElement" />
-    <home-about class="about-section" />
+    <home-about :scrollToData="scrollToData" />
     <home-news />
   </div>
 </template>
@@ -21,12 +21,6 @@ export default {
     scrollToData: function(newVal) { 
       this.scrollToElement(newVal)
       this.$emit("setScrollTo","")
-    }
-  },
-  mounted(){
-    let link = window.location.href
-    if(link.split("#")[1]){
-     this.scrollToElement(link.split("#")[1])
     }
   },
   methods: {

@@ -43,7 +43,7 @@
     </div>
     <div class="about__right">
       <ul class="list-box">
-        <li>
+        <li class="secret-counter">
           <lottie-player
             src="https://assets5.lottiefiles.com/private_files/lf30_sqamzndl.json"
             background="transparent"
@@ -93,7 +93,7 @@
             </div>
           </div>
         </li>
-        <li>
+        <li class="figment-learn">
           <lottie-player
             src="https://assets2.lottiefiles.com/private_files/lf30_0vbtxqrd.json"
             background="transparent"
@@ -131,7 +131,7 @@
             </div>
           </div>
         </li>
-        <li>
+        <li class="richie-rich">
           <lottie-player
             src="https://assets10.lottiefiles.com/private_files/lf30_woabmjiz.json"
             background="transparent"
@@ -164,6 +164,33 @@
   </div>
 </template>
 
+<script>
+export default {
+  props:['scrollToData'],
+  watch: { 
+    scrollToData: function(newVal) { 
+      this.scrollToElement(newVal)
+      this.$emit("setScrollTo","")
+    }
+  },
+  mounted(){
+    let link = window.location.href
+    if(link.split("#")[1]){
+     this.scrollToElement(link.split("#")[1])
+    }
+  },
+  methods: {
+    scrollToElement(element) {
+      // console.log(element)
+      const el = this.$el.getElementsByClassName(element)[0];
+      // console.log(el);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .about {

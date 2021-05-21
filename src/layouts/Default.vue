@@ -3,7 +3,9 @@
     <s-topbar />
     <s-navbar page="default" v-on:scrollTo="scrollToElement" />
     <main class="main">
+      <transition name="slide-fade">
       <router-view v-on:setScrollTo="setScrollTo" :scrollToData="scrollToData" />
+      </transition>
     </main>
     <s-footer :page="$route.path == '/' ? 'home' : ''" />
   </div>
@@ -36,6 +38,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
 .app {
   display: flex;
   flex-wrap: wrap;

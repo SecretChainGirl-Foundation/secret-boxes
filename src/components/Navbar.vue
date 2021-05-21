@@ -105,15 +105,15 @@
               : 'navbar-dropdown font-gobold'
           "
         >
-          <li @click="to('/secret/counter')">
+          <li @click="scrollTo('secret-counter')">
             <img src="/img/box-gray.png" alt="Secret Counter" />
             <h4>Secret Counter</h4>
           </li>
-          <li @click="scrollTo('about-section')">
+          <li @click="scrollTo('figment-learn')">
             <img src="/img/box-blue.png" alt="Figment learn" />
             <h4>Figment learn</h4>
           </li>
-          <li @click="scrollTo('about-section')">
+          <li @click="scrollTo('richie-rich')">
             <img src="/img/box-orange.png" alt="Richie Rich" />
             <h4>Richie Rich</h4>
           </li>
@@ -208,6 +208,7 @@ export default {
       if(this.$route.path !== '/'){
         this.$router.push("/#"+el)
       }else{
+        this.$router.push("/#"+el)
         this.toggleMenu = false;
         this.toggleDropdown = false;
         this.$emit("scrollTo", el);
